@@ -89,3 +89,8 @@ export default connect(mapStateToProps)(Home);
 
 |4. Redux Toolkit - advanced|
 Redux toolkit is a package with a lot of shortcuts to be able to have the same functionality with less code.
+
+***when you work with ReduxToolkit, it's okay to mutate the state!! : Redux toolkit works behind the scene with Immer and takes care of the state mutation.
+
+***key concept that we're using in this app:
+createReducer & createAction & configureStore & createSlice

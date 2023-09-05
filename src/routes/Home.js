@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import ToDo from '../components/ToDo';
 import { add } from '../store';
 
-const Home = ({ toDos, add }) => {
+const Home = ({ toDos, addToDo }) => {
     const [text, setText] = useState('');
     const onChange = (e) => {
         setText(e.target.value);
@@ -11,7 +11,7 @@ const Home = ({ toDos, add }) => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        console.log(text);
+        addToDo(text);
         setText('');
     };
 
@@ -24,8 +24,8 @@ const Home = ({ toDos, add }) => {
             </form>
             <ul>
                 {toDos.map((toDo) => (
-                    <ToDo {...toDo} key={toDo.id} />
-                ))}{' '}
+                    <ToDo {...toDo} key={toDo.id} id={toDo.id} />
+                ))}
             </ul>
         </>
     );
