@@ -86,3 +86,6 @@ connect() : takes two argument which are 'state' and 'dispatch' || mapStateToPro
 ```
 export default connect(mapStateToProps)(Home);
 ```
+
+|4. Redux Toolkit - advanced|
+Redux toolkit is a package with a lot of shortcuts to be able to have the same functionality with less code.
